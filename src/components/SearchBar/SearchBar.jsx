@@ -8,6 +8,7 @@ const SearchBar = ({ searchQuery, setSearchQuery }) => {
           autoFocus
           placeholder="Search images and photos"
           name="id"
+          // value={searchQuery}
         />
         <button type="submit">Search</button>
       </form>

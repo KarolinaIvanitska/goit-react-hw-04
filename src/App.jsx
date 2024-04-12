@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div>
-      <SearchBar />
+      <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <ImageGallery images={images} />
       {isLoading && <Loader />}
       <LoadMoreBtn handleLoadMore={handleLoadMore} />
