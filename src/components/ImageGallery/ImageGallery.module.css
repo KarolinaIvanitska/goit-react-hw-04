@@ -1,0 +1,12 @@
+.list {
+  list-style: none;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.ul_list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  justify-content: center;
+}

@@ -14,7 +14,7 @@ export async function fetchImages(query, page) {
         client_id: API_KEY,
       },
     });
-    return response.data.results;
+    return response.data;
   } catch (err) {
     console.log(err);
   }
