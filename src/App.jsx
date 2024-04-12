@@ -16,10 +16,11 @@ function App() {
   }, []);
 
   return (
-    <>
-      <SearchBar />
-      <ImageGallery />
-    </>
+    <div>
+      {/* <SearchBar /> */}
+      Image Gallery
+      <ImageGallery images={images} />
+    </div>
   );
 }
 
