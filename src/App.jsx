@@ -8,27 +8,32 @@ import Loader from "./components/Loader/Loader";
 
 function App() {
   const [images, setImages] = useState([]);
-  const [offset, setOffset] = useState(0);
+  const [offset, setOffset] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [query, setQuery] = useState("");
 
   useEffect(() => {
     const getImages = async () => {
       setIsLoading(true);
-      const imagesList = await fetchImages(offset);
+      const imagesList = await fetchImages(query, offset);
       setImages([...images, ...imagesList.results]);
       setIsLoading(false);
     };
     getImages();
-  }, [offset]);
+  }, [offset, query]);
 
   function handleLoadMore() {
     setOffset(offset + 10);
   }
 
+  const handleChangeQuery = (queryStr) => {
+    setQuery(queryStr);
+    setImages([]);
+  };
+
   return (
     <div>
-      <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+      <SearchBar setQuery={handleChangeQuery} />
       <ImageGallery images={images} />
       {isLoading && <Loader />}
       <LoadMoreBtn handleLoadMore={handleLoadMore} />

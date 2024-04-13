@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  background-color: rgb(136, 3, 3);
+  justify-content: center;
+  align-items: center;
+  width: 1440px;
+  border-radius: 6px;
+}
+
+.field {
+  width: 800px;
+  height: 40px;
+  margin: 15px;
+  border-radius: 6px;
+  padding: 15px;
+  border: 2px solid rgb(24, 3, 11);
+}
+
+.form {
+  position: relative;
+}
+
+.btn {
+  border: 2px solid rgb(55, 30, 39);
+}

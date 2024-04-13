@@ -1,4 +1,5 @@
 .btn {
-  color: beige;
-  background-color: rgb(17, 65, 177);
+  color: white;
+  background-color: rgb(107, 11, 43);
+  border: 2px solid rgb(55, 30, 39);
 }
